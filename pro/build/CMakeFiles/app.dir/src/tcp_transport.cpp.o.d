@@ -1,6 +1,6 @@
 CMakeFiles/app.dir/src/tcp_transport.cpp.o: \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/src/tcp_transport.cpp \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/include/tcp_transport.h \
+  /Users/zhangzhiqing/desktop/-windows/pro/src/tcp_transport.cpp \
+  /Users/zhangzhiqing/desktop/-windows/pro/include/tcp_transport.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/functional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/search.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -872,7 +872,7 @@ CMakeFiles/app.dir/src/tcp_transport.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/include/logger.h \
+  /Users/zhangzhiqing/desktop/-windows/pro/include/logger.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/arpa/inet.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/netinet/in.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/socket.h \

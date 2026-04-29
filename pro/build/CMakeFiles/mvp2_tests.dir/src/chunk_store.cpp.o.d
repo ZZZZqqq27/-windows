@@ -1,6 +1,6 @@
 CMakeFiles/mvp2_tests.dir/src/chunk_store.cpp.o: \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/src/chunk_store.cpp \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/include/chunk_store.h \
+  /Users/zhangzhiqing/desktop/-windows/pro/src/chunk_store.cpp \
+  /Users/zhangzhiqing/desktop/-windows/pro/include/chunk_store.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \
@@ -846,8 +846,8 @@ CMakeFiles/mvp2_tests.dir/src/chunk_store.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/temp_value.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__split_buffer \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/include/logger.h \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/include/sha256.h \
+  /Users/zhangzhiqing/desktop/-windows/pro/include/logger.h \
+  /Users/zhangzhiqing/desktop/-windows/pro/include/sha256.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \

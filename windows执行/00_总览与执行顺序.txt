@@ -1,0 +1,42 @@
+# Mac-Windows 两机跨主机测试总览与执行顺序
+
+## 1. 测试目标
+- 两台物理机：`Mac` 与 `Windows(WSL2)` 完成真实网络互通。
+- 每台机器启用 `2-3` 个端口进行多端口测试。
+- 分两步推进：
+  1) 先在 Windows(WSL2) 单机跑通，排除构建与本机运行问题。
+  2) 再做两机功能测试与性能测试，并沉淀脚本与标准化输出。
+
+## 2. 目录用途
+- `01_环境准备_Windows_WSL.txt`：安装与环境配置。
+- `02_第一步_Windows单机跑通.txt`：本机验证命令与验收标准。
+- `03_两机测试设计_功能项.txt`：功能测试矩阵。
+- `04_两机测试设计_性能项.txt`：性能测试矩阵。
+- `05_脚本清单与参数规范.txt`：脚本说明、参数、输出格式。
+- `scripts/`：可执行脚本。
+- `output/`：测试产物（原始日志、汇总结果）。
+
+## 3. 快速执行顺序
+1. 按 `01` 完成 WSL2 与依赖安装。
+2. 在 `scripts/common_env.sh` 填写本机与对端 IP、端口、路径。
+3. 执行第一步脚本：
+   - `bash windows执行/scripts/step1_windows_smoke.sh`
+4. 执行第二步功能脚本：
+   - Windows 作为客户端：`bash windows执行/scripts/step2_dual_host_func.sh --direction win_to_mac`
+   - Windows 作为服务端：`bash windows执行/scripts/step2_dual_host_func.sh --direction mac_to_win`
+5. 执行第二步性能脚本：
+   - `bash windows执行/scripts/step2_dual_host_perf.sh --direction win_to_mac`
+   - `bash windows执行/scripts/step2_dual_host_perf.sh --direction mac_to_win`
+6. 汇总 `output/summary` 中结果，形成论文图表。
+
+## 4. 验收门槛
+- 第一阶段：Windows(WSL2) 单机多端口全部可连通，核心流程成功。
+- 第二阶段功能：双向互通，多端口请求正确率达到预设阈值（建议 >=99%）。
+- 第二阶段性能：可输出吞吐、延迟、成功率，且每组至少 3 轮数据。
+
+## 5. 最短执行路径
+1) 填 `common_env.sh`。
+2) 跑 `step1_windows_smoke.sh`。
+3) 跑 `step2_dual_host_func.sh`（双向各一次）。
+4) 跑 `step2_dual_host_perf.sh`（双向各一次）。
+5) 查看 `output/summary/*.tsv` 与 `output/summary/*.json`。

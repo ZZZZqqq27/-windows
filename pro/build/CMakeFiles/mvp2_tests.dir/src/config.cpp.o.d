@@ -1,6 +1,6 @@
 CMakeFiles/mvp2_tests.dir/src/config.cpp.o: \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/src/config.cpp \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/include/config.h \
+  /Users/zhangzhiqing/desktop/-windows/pro/src/config.cpp \
+  /Users/zhangzhiqing/desktop/-windows/pro/include/config.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \

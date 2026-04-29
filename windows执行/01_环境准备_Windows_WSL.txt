@@ -1,0 +1,82 @@
+# 01 环境准备（Windows + WSL2）
+
+## 1. Windows 侧准备
+1) 管理员 PowerShell 执行：
+   `wsl --install`
+2) 重启后确认：
+   `wsl -l -v`
+3) 若默认不是 WSL2：
+   `wsl --set-default-version 2`
+
+## 2. WSL(Ubuntu) 基础工具安装
+在 WSL 终端执行：
+
+```bash
+sudo apt update
+sudo apt -y upgrade
+sudo apt install -y build-essential g++ make cmake pkg-config git curl jq
+```
+
+可选（网络连通调试）：
+
+```bash
+sudo apt install -y iproute2 net-tools netcat-openbsd
+```
+
+## 3. 项目目录建议
+- 建议在 WSL 的 Linux 文件系统运行，不要在 `/mnt/c` 长期构建。
+- 示例：
+
+```bash
+mkdir -p ~/workspace
+cd ~/workspace
+git clone <你的仓库地址>
+cd zzqGraduationProj/毕业设计正式项目/pro
+```
+
+## 4. 项目编译
+
+```bash
+cd /path/to/毕业设计正式项目/pro
+cmake -S . -B build
+cmake --build build
+```
+
+确认二进制存在：
+
+```bash
+ls -l build/app
+```
+
+## 5. 防火墙和端口
+
+建议端口规划：
+- Windows(WSL) 服务端口：`18081,18082,18083`
+- Mac 服务端口：`28081,28082,28083`
+
+Windows 防火墙放行（管理员 PowerShell）：
+
+```powershell
+netsh advfirewall firewall add rule name="zzq-pro-18081" dir=in action=allow protocol=TCP localport=18081
+netsh advfirewall firewall add rule name="zzq-pro-18082" dir=in action=allow protocol=TCP localport=18082
+netsh advfirewall firewall add rule name="zzq-pro-18083" dir=in action=allow protocol=TCP localport=18083
+```
+
+Mac 防火墙按系统设置放行对应端口（或临时关闭用于实验）。
+
+## 6. 填写公共配置脚本
+编辑：
+`windows执行/scripts/common_env.sh`
+
+重点填写：
+- `PROJECT_ROOT`
+- `WIN_HOST_IP`
+- `MAC_HOST_IP`
+- `WIN_PORTS`
+- `MAC_PORTS`
+
+## 7. 准备完成标准
+- `build/app` 可执行。
+- 本机端口可监听。
+- 两机互相 `ping` 可达（若网络策略允许）。
+- `common_env.sh` 的 IP/端口/路径已填好。

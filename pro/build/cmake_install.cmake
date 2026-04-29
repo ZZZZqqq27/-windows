@@ -1,4 +1,4 @@
-# Install script for directory: /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro
+# Install script for directory: /Users/zhangzhiqing/desktop/-windows/pro
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/zhangzhiqing/desktop/-windows/pro/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

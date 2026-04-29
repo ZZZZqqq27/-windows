@@ -1,6 +1,6 @@
 CMakeFiles/app.dir/src/routing_table.cpp.o: \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/src/routing_table.cpp \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/include/routing_table.h \
+  /Users/zhangzhiqing/desktop/-windows/pro/src/routing_table.cpp \
+  /Users/zhangzhiqing/desktop/-windows/pro/include/routing_table.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \

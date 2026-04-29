@@ -1,6 +1,6 @@
 CMakeFiles/app.dir/src/logger.cpp.o: \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/src/logger.cpp \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/include/logger.h \
+  /Users/zhangzhiqing/desktop/-windows/pro/src/logger.cpp \
+  /Users/zhangzhiqing/desktop/-windows/pro/include/logger.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \

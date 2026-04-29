@@ -1,0 +1,72 @@
+# 05 脚本清单与参数规范
+
+## 1. 脚本清单
+
+1) `windows执行/scripts/common_env.sh`  
+   用途：公共变量定义（路径、IP、端口、并发、轮次、日志目录）。
+
+2) `windows执行/scripts/step1_windows_smoke.sh`  
+   用途：第一步，本机多端口可运行基线验证。
+
+3) `windows执行/scripts/step2_dual_host_func.sh`  
+   用途：第二步功能测试（双向、多端口、一致性与异常恢复基础能力）。
+
+4) `windows执行/scripts/step2_dual_host_perf.sh`  
+   用途：第二步性能测试（轮次执行、吞吐/成功率统计、汇总输出）。
+
+## 2. 参数规范
+
+### step1_windows_smoke.sh
+- 无强制参数；从 `common_env.sh` 读取配置。
+- 输出：
+  - `output/raw/step1_windows_smoke.log`
+  - `output/summary/step1_windows_smoke.tsv`
+
+### step2_dual_host_func.sh
+- `--direction <win_to_mac|mac_to_win>`
+- 可选：
+  - `--ports <p1,p2,p3>`
+  - `--peer-ip <x.x.x.x>`
+- 输出：
+  - `output/raw/step2_func_<direction>.log`
+  - `output/summary/step2_func_<direction>.tsv`
+
+### step2_dual_host_perf.sh
+- `--direction <win_to_mac|mac_to_win>`
+- 可选：
+  - `--ports <p1,p2,p3>`
+  - `--peer-ip <x.x.x.x>`
+  - `--rounds <N>`
+  - `--size <10MB|100MB|1GB>`
+  - `--concurrency <1|8|32>`
+- 输出：
+  - `output/raw/step2_perf_<direction>.log`
+  - `output/summary/step2_perf_<direction>_rounds.tsv`
+  - `output/summary/step2_perf_<direction>_summary.json`
+
+## 3. 统一输出字段
+TSV 建议字段：
+- `timestamp`
+- `direction`
+- `peer_ip`
+- `ports`
+- `size`
+- `round`
+- `success_count`
+- `fail_count`
+- `elapsed_ms`
+- `throughput_mb_s`
+
+JSON 汇总建议字段：
+- `direction`
+- `rounds`
+- `size`
+- `avg_elapsed_ms`
+- `avg_throughput_mb_s`
+- `success_rate`
+
+## 4. 执行建议
+1) 先运行 `step1_windows_smoke.sh`。  
+2) 再运行功能脚本双向各 1 次。  
+3) 最后运行性能脚本双向各 3 轮。  
+4) 汇总 `output/summary` 生成论文图表。  

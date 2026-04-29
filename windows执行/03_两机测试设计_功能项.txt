@@ -1,0 +1,52 @@
+# 03 两机测试设计：功能项
+
+## 1. 功能目标
+- 验证 `Windows(WSL) -> Mac` 与 `Mac -> Windows(WSL)` 双向互通。
+- 验证每机 `2-3` 端口并发访问正确性。
+- 验证关键流程：上传、下载、manifest 整文件下载、统计查询。
+
+## 2. 测试前提
+- 两台机器在同一网络，IP 可达。
+- 双方端口都已放行：
+  - Windows: `18081,18082,18083`
+  - Mac: `28081,28082,28083`
+- 两端都编译得到 `pro/build/app`。
+
+## 3. 功能测试矩阵
+
+### A. 连通性与握手
+1) Windows 作为客户端，访问 Mac 的 3 个端口，要求全部成功。
+2) Mac 作为客户端，访问 Windows 的 3 个端口，要求全部成功。
+
+### B. 核心业务流程
+1) 上传 + 多副本分发（`--upload --replica --manifest_out`）。
+2) 按 chunk_id 下载（`--mode client --peer --chunk_id`）。
+3) 按 manifest 下载整文件（`--manifest --out_file`）。
+4) 统计查询（`--mode stats --stats_type ... --json`）。
+
+### C. 一致性校验
+1) 输入文件与下载输出做 `cmp` 比较。
+2) 记录 chunk_id 与 manifest 条目数量。
+3) 核对统计输出中请求次数和成功率与执行轮次一致。
+
+### D. 异常恢复
+1) 人工停掉一个端口服务，验证请求失败可感知并记录。
+2) 恢复服务后重试，验证功能恢复。
+3) 超时或拒绝连接时，日志中应明确原因和端口。
+
+## 4. 执行脚本
+- Windows 侧执行：
+  - `bash windows执行/scripts/step2_dual_host_func.sh --direction win_to_mac`
+  - `bash windows执行/scripts/step2_dual_host_func.sh --direction mac_to_win`
+
+说明：
+- `win_to_mac`：Windows 作为客户端，验证访问 Mac。
+- `mac_to_win`：Windows 作为服务端，脚本会启动本地服务并给出 Mac 端客户端命令模板。
+
+## 5. 功能验收标准
+- 双向连通测试通过率 >= 99%（建议目标 100%）。
+- 核心流程（上传/下载/manifest）结果正确。
+- 异常恢复场景可复现且恢复后可继续执行。
+- 结果产物齐全：
+  - `windows执行/output/summary/step2_func_*.tsv`
+  - `windows执行/output/raw/step2_func_*.log`

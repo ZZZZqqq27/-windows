@@ -54,10 +54,10 @@ RM = /opt/homebrew/Cellar/cmake/3.29.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro
+CMAKE_SOURCE_DIR = /Users/zhangzhiqing/desktop/-windows/pro
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/build
+CMAKE_BINARY_DIR = /Users/zhangzhiqing/desktop/-windows/pro/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -83,14 +83,14 @@ clean: CMakeFiles/mvp2_tests.dir/clean
 CMakeFiles/app.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/zhangzhiqing/desktop/-windows/pro/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target app"
 .PHONY : CMakeFiles/app.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/app.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzhiqing/desktop/-windows/pro/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/app.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzhiqing/desktop/-windows/pro/build/CMakeFiles 0
 .PHONY : CMakeFiles/app.dir/rule
 
 # Convenience name for target.
@@ -109,14 +109,14 @@ CMakeFiles/app.dir/clean:
 CMakeFiles/mvp2_tests.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mvp2_tests.dir/build.make CMakeFiles/mvp2_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mvp2_tests.dir/build.make CMakeFiles/mvp2_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21 "Built target mvp2_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/zhangzhiqing/desktop/-windows/pro/build/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21 "Built target mvp2_tests"
 .PHONY : CMakeFiles/mvp2_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mvp2_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzhiqing/desktop/-windows/pro/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mvp2_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zhangzhiqing/desktop/-windows/pro/build/CMakeFiles 0
 .PHONY : CMakeFiles/mvp2_tests.dir/rule
 
 # Convenience name for target.

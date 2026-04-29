@@ -1,6 +1,6 @@
 CMakeFiles/app.dir/src/hex_utils.cpp.o: \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/src/hex_utils.cpp \
-  /Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/include/hex_utils.h \
+  /Users/zhangzhiqing/desktop/-windows/pro/src/hex_utils.cpp \
+  /Users/zhangzhiqing/desktop/-windows/pro/include/hex_utils.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdint \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \

@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/zhangzhiqing/武大的/毕业设计/zzqGraduationProj/毕业设计正式项目/pro/include -isystem /opt/homebrew/Cellar/openssl@3/3.6.0/include
+CXX_INCLUDES = -I/Users/zhangzhiqing/desktop/-windows/pro/include -isystem /opt/homebrew/Cellar/openssl@3/3.6.0/include
 
 CXX_FLAGSarm64 = -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
 

@@ -1,0 +1,46 @@
+# 04 两机测试设计：性能项
+
+## 1. 性能目标
+- 在真实两机网络上给出可复现实验数据。
+- 指标覆盖吞吐、延迟、成功率、错误率。
+- 支持双向测试：`Windows -> Mac` 和 `Mac -> Windows`。
+
+## 2. 评估指标
+- 吞吐：`MB/s`（总下载字节 / 总耗时）。
+- 延迟：单次请求耗时（ms），统计均值和 P95/P99。
+- 成功率：成功请求数 / 总请求数。
+- 错误率：失败请求数 / 总请求数。
+
+## 3. 测试维度
+- 数据规模：`10MB / 100MB / 1GB`
+- 并发等级：`1 / 8 / 32`
+- 端口组合：`单端口` vs `三端口轮询`
+- 方向：`win_to_mac`、`mac_to_win`
+- 每组轮次：至少 `3` 轮
+
+## 4. 执行脚本
+- Windows 侧执行：
+  - `bash windows执行/scripts/step2_dual_host_perf.sh --direction win_to_mac --rounds 3`
+  - `bash windows执行/scripts/step2_dual_host_perf.sh --direction mac_to_win --rounds 3`
+
+说明：
+- `win_to_mac`：Windows 客户端主动压测 Mac 服务端。
+- `mac_to_win`：Windows 侧脚本会启动服务并输出 Mac 侧压测命令模板。
+
+## 5. 输出文件规范
+- 原始日志：
+  - `windows执行/output/raw/step2_perf_<direction>.log`
+- 逐轮明细：
+  - `windows执行/output/summary/step2_perf_<direction>_rounds.tsv`
+- 汇总指标：
+  - `windows执行/output/summary/step2_perf_<direction>_summary.json`
+
+## 6. 数据有效性要求
+- 每组至少 3 轮，剔除明显异常轮次需说明理由。
+- 测试期间尽量保持机器负载稳定。
+- 每次实验记录 commit id、配置文件、脚本参数。
+
+## 7. 建议图表（论文可直接使用）
+- 各数据规模吞吐对比柱状图（双向对比）。
+- 各并发等级 P95 延迟折线图。
+- 端口数（1 vs 3）对吞吐增益图。

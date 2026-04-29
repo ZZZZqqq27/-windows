@@ -1,0 +1,40 @@
+# 02 第一步：Windows(WSL2) 单机跑通
+
+目的：先建立“本机基线”，确保编译、端口监听、上传下载主链路都正常，再进入两机联调。
+
+## 1. 执行命令
+在仓库根目录执行：
+
+```bash
+bash windows执行/scripts/step1_windows_smoke.sh
+```
+
+## 2. 脚本做了什么
+1) 校验 `build/app` 是否存在，不存在则自动构建。  
+2) 创建单机测试数据目录：`pro/data/win_smoke`。  
+3) 自动生成 3 份配置，监听端口 `18081/18082/18083`。  
+4) 启动 2 个服务端（18082、18083），节点 1 执行上传并生成 manifest。  
+5) 启动节点 1 服务端（18081），客户端逐端口发起下载验证。  
+6) 校验输出文件与输入文件一致。  
+7) 产出日志和结果汇总（TSV）。  
+
+## 3. 验收标准
+- 三个端口都可以被客户端访问。
+- 客户端下载成功，且 `cmp` 校验通过。
+- 日志中无致命错误（`error/fatal` 仅可为可解释的非阻断告警）。
+- 结果文件存在：
+  - `windows执行/output/summary/step1_windows_smoke.tsv`
+  - `windows执行/output/raw/step1_windows_smoke.log`
+
+## 4. 常见失败定位
+1) 端口占用：
+   - 改 `common_env.sh` 里 `WIN_PORTS`。
+2) 二进制不存在：
+   - 先在 `pro/` 下执行 `cmake -S . -B build && cmake --build build`。
+3) 下载失败：
+   - 查看 `pro/logs/win_smoke_*` 和 `windows执行/output/raw/step1_windows_smoke.log`。
+4) 权限问题：
+   - `chmod +x windows执行/scripts/*.sh`。
+
+## 5. 第一阶段完成判定
+当脚本返回 `PASS`，并且 summary 中三端口验证全部 `ok`，则第一阶段通过。
