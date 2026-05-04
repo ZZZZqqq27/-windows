@@ -1,0 +1,4 @@
+[test] stats: download json
+[test] stats: upload_meta json
+[test] stats: upload_replica json
+[test] stats query ok

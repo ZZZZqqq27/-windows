@@ -1,0 +1,37 @@
+[MAC] === 脚本C: Mac端执行客户端下载 ===
+[MAC] SCRIPTS_DIR=/Users/zhangzhiqing/Desktop/-windows/windows执行/scripts
+[MAC] PROJECT_ROOT=/Users/zhangzhiqing/Desktop/-windows
+[MAC] 配置文件不存在，自动生成...
+[MAC] ✓ 配置文件生成完成
+[MAC] ✗ APP_BIN 不存在或不可执行: /Users/zhangzhiqing/Desktop/-windows/pro/build/app
+[MAC] 请先编译项目: cd /Users/zhangzhiqing/Desktop/-windows/pro && mkdir -p build && cd build && cmake .. && make
+[MAC] === 脚本C: Mac端执行客户端下载 ===
+[MAC] SCRIPTS_DIR=/Users/zhangzhiqing/Desktop/-windows/windows执行/scripts
+[MAC] PROJECT_ROOT=/Users/zhangzhiqing/Desktop/-windows
+[MAC] ✓ 配置文件已存在
+[MAC] ✗ APP_BIN 不存在或不可执行: /Users/zhangzhiqing/Desktop/-windows/pro/build/app
+[MAC] 请先编译项目: cd /Users/zhangzhiqing/Desktop/-windows/pro && mkdir -p build && cd build && cmake .. && make
+[MAC] === 脚本C: Mac端执行客户端下载 ===
+[MAC] SCRIPTS_DIR=/Users/zhangzhiqing/Desktop/-windows/windows执行/scripts
+[MAC] PROJECT_ROOT=/Users/zhangzhiqing/Desktop/-windows
+[MAC] ✓ 配置文件已存在
+[MAC] ✗ APP_BIN 不存在或不可执行: /Users/zhangzhiqing/Desktop/-windows/pro/build/app
+[MAC] 请先编译项目: cd /Users/zhangzhiqing/Desktop/-windows/pro && mkdir -p build && cd build && cmake .. && make
+[MAC] === 脚本C: Mac端执行客户端下载 ===
+[MAC] SCRIPTS_DIR=/Users/zhangzhiqing/Desktop/-windows/windows执行/scripts
+[MAC] PROJECT_ROOT=/Users/zhangzhiqing/Desktop/-windows
+[MAC] ✓ 配置文件已存在
+[MAC] ✗ APP_BIN 不存在或不可执行: /Users/zhangzhiqing/Desktop/-windows/pro/build/app
+[MAC] 请先编译项目: cd /Users/zhangzhiqing/Desktop/-windows/pro && mkdir -p build && cd build && cmake .. && make
+[MAC] === 脚本C: Mac端执行客户端下载 ===
+[MAC] SCRIPTS_DIR=/Users/zhangzhiqing/Desktop/-windows/windows执行/scripts
+[MAC] PROJECT_ROOT=/Users/zhangzhiqing/Desktop/-windows
+[MAC] ✓ 配置文件已存在
+[MAC] ✗ APP_BIN 不存在或不可执行: /Users/zhangzhiqing/Desktop/-windows/pro/build/app
+[MAC] 请先编译项目: cd /Users/zhangzhiqing/Desktop/-windows/pro && mkdir -p build && cd build && cmake .. && make
+[MAC] === 脚本C: Mac端执行客户端下载 ===
+[MAC] SCRIPTS_DIR=/Users/zhangzhiqing/Desktop/-windows/windows执行/scripts
+[MAC] PROJECT_ROOT=/Users/zhangzhiqing/Desktop/-windows
+[MAC] ✓ 配置文件已存在
+[MAC] ✗ APP_BIN 不存在或不可执行: /Users/zhangzhiqing/Desktop/-windows/pro/build/app
+[MAC] 请先编译项目: cd /Users/zhangzhiqing/Desktop/-windows/pro && mkdir -p build && cd build && cmake .. && make

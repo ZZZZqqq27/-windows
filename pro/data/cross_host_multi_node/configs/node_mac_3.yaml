@@ -1,0 +1,15 @@
+node_id: "cross_host_multi_node-mac_3"
+listen_port: 28083
+seed_nodes: "192.168.1.3:18081,192.168.1.11:28081,192.168.1.3:18082,192.168.1.11:28082,192.168.1.3:18083,192.168.1.11:28083"
+self_addr: "192.168.1.11:28083"
+routing_capacity: 8
+chunk_size_mb: 1
+chunks_dir: "/Users/zhangzhiqing/Desktop/-windows/pro/data/cross_host_multi_node/node_mac_3/chunks"
+chunk_index_file: "/Users/zhangzhiqing/Desktop/-windows/pro/data/cross_host_multi_node/node_mac_3/chunk_index.tsv"
+download_stats_file: "/Users/zhangzhiqing/Desktop/-windows/pro/data/cross_host_multi_node/node_mac_3/download_stats.tsv"
+upload_meta_file: "/Users/zhangzhiqing/Desktop/-windows/pro/data/cross_host_multi_node/node_mac_3/upload_meta.tsv"
+upload_replica_file: "/Users/zhangzhiqing/Desktop/-windows/pro/data/cross_host_multi_node/node_mac_3/upload_replica.tsv"
+aes_key_hex: "00112233445566778899aabbccddeeff"
+hmac_key_hex: "0102030405060708090a0b0c0d0e0f10"
+download_strategy: "round_robin"
+log_file: "/Users/zhangzhiqing/Desktop/-windows/pro/logs/cross_host_multi_node_node_mac_3.log"
