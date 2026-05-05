@@ -1,0 +1,4 @@
+/Users/zhangzhiqing/Desktop/-windows/pro/build/CMakeFiles/app.dir
+/Users/zhangzhiqing/Desktop/-windows/pro/build/CMakeFiles/mvp2_tests.dir
+/Users/zhangzhiqing/Desktop/-windows/pro/build/CMakeFiles/edit_cache.dir
+/Users/zhangzhiqing/Desktop/-windows/pro/build/CMakeFiles/rebuild_cache.dir
