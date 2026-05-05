@@ -1,0 +1,21 @@
+# Build directory
+pro/build/
+
+# Data directories
+output/
+data/
+
+# Logs
+pro/logs/*.log
+
+# Temporary files
+pro/tmp_*.status
+*.o
+*.o.d
+*.bin
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
